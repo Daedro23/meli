@@ -1,0 +1,68 @@
+@import '../../Styles/variables.scss';
+
+.list {
+    background-color: $white;
+    border-radius: 4px;
+    margin: 40px 11% 0 0;
+    @media(max-width: 768px) {
+        margin: 40px 0 0 0;
+    }
+    &__container {
+        display: flex;
+        border-bottom: 1px solid $lightwhite;
+        @media(max-width: 768px) {
+            padding-bottom: 16px;
+        }
+    }
+    &__img {
+        padding: $small;
+        @media(max-width: 768px) {
+            align-self: center;
+        }
+        img {
+            width: 200px;
+            cursor: pointer;
+            @media(max-width: 768px) {
+                width: 60px;
+            }
+        }
+    }
+    &__details {
+        width: 100%;
+        padding: 30px 16px 0;
+        &__details1 {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20%;
+            .list__location {
+                font-size: 12px;
+                @media(max-width: 768px) {
+                    display: none;
+                }
+            }
+            .list__shipping {
+                margin-left: $small;
+                @media(max-width: 768px) {
+                    margin-left: 3px;
+                }
+            }
+            .list__price {
+                letter-spacing: 1px;
+                font-size: 24px;
+                @media(max-width: 768px) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .list__description {
+            color: $black;
+            font-size: 18px;
+            text-decoration: none;
+            @media(max-width: 768px) {
+                width: 60px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+body {
+  background-color: $lightwhite;
+}
+.container {
+  margin: 8px 10%;
+  border-radius: 4px;
+  @media(max-width: 768px) {
+    margin: 8px 6%;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../Styles/variables.scss';
+
+.flex {
+    display: flex;
+    background-color: $yellow;
+    padding: 5px 0;
+    justify-content: center;
+    .logo {
+        margin-left: 10%;
+        .img {
+            width: 55%;
+            height: 100%;
+        }
+    }
+}

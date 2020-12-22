@@ -1,0 +1,103 @@
+@import '../../Styles/variables.scss';
+
+.description {
+    background-color: $white;
+    border-radius: 4px;
+    margin: 40px 11% 0 0;
+    padding: 32px 0;
+    @media(max-width: 768px) {
+        margin: 40px 0 0 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__img {
+        margin: 0 32px;
+        align-self: center;
+        @media(max-width: 768px) {
+            margin: 32px;
+            position: absolute;
+            top: 42%;
+        }
+        img {     
+            width: 338px;
+            @media(max-width: 768px) {
+                width: 200px;
+                align-self: center;
+            }
+        }
+    }
+    &__data {
+        margin: 32px;
+        width: 30%;
+        &__items {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 24px;
+            margin: 16px 0 32px;
+            @media(max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+        &__price {
+            font-size: 46px;
+            margin: 32px 0;
+            @media(max-width: 768px) {
+                position: relative;
+                top: 150px;
+                font-size: 36px;
+            }
+        }
+        &__container {
+            &__button {
+                border-radius: 4px;
+                background-color: $blue;
+                width: 290px;
+                height: 50px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                color: $white;
+                transition-duration: 0.3s;
+                &:hover {
+                    background-color: #2968c8;
+                }
+                @media(max-width: 768px) {
+                    width: 250px;
+                    position: relative;
+                    top: 130px;
+                    margin-bottom: 140px;
+                }
+            }
+            @media(max-width: 768px) {
+                text-align: center;
+            }
+        }
+        @media(max-width: 768px) {
+            padding: 10px;
+            width: initial;
+            margin: 0px 8px;
+        }
+    }
+    &__descrip {
+        margin: 32px 32px 0;
+        width: 50%;
+        text-align: justify;
+        &__title {
+            font-size: 28px;
+        }
+        &__text {
+            font-size: $small;
+        }
+        @media(max-width: 768px) {
+            margin: 32px 16px 0;
+            text-align: justify;
+            width: initial;
+        }
+    }
+}

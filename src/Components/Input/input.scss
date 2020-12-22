@@ -1,0 +1,43 @@
+@import '../../Styles/variables.scss';
+
+.cont {
+    flex: 1;
+    position: relative;
+    .inputSearch {
+        font-size: 18px;
+        margin: 8px 0;
+        border: 0;
+        padding: 5px 0 5px 10px;
+        width: 75%;
+        border-radius: 3px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .buttonSearch {
+        position: absolute;
+        left: 75%;
+        margin-top: 8px;
+        border: 0px;
+        background-color: $lightwhite;
+        height: 31px;
+        cursor: pointer;
+        border-radius: 3px;
+        &:focus {
+            outline: none;
+        }
+        &::before {
+            content: "";
+            display: block;
+            height: 22px;
+            border-left: 1px solid #e6e6e6;
+            position: absolute;
+            top: 3.5px;
+            left: 0;
+        }
+        img {
+            height: 75%;
+            padding: 4px 0;
+        }
+    }
+}
