@@ -34,7 +34,7 @@ class Description extends React.Component {
         return (
             <div className="description">
                 <MetaTags>
-                    <title>{this.state.item.title} | Mercado Libre</title>
+                    <title>{this.state.item.title} | Mercado </title>
                     {tags && tags.map((tags, i) => <meta key={i} name="article:tag" content={tags} />)}
                 </MetaTags>
                 <div className="description__container">

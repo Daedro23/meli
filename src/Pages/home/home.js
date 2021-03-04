@@ -11,7 +11,8 @@ class Home extends React.Component {
         super(props);
         this.state = {
             isLoaded: false,
-            items: []
+            items: [],
+            titlePage: ''
         };
     }
 
@@ -24,6 +25,7 @@ class Home extends React.Component {
                     items: response,
                     isLoaded: true
                 });
+                this.findResult();
                 console.log(this)
             })
             .catch(err => {
@@ -31,11 +33,19 @@ class Home extends React.Component {
             });
     }
 
+    findResult() {
+        if (this.state.items.results.length != 0) {
+            this.state.titlePage = `${this.state.items.query} | Mercado Libre`;
+        } else  {
+            this.state.titlePage = 'Mercado Libre';
+        }
+    }
+    
     render() {
         const articles = this.state.items;
         return (
             <div className="list">
-                <ReactTitle title={`${articles.query} | Mercado Libre`} />
+                <ReactTitle title={`${this.state.items.query} | Mercado Libre`} />
                 {
                     articles.results && articles.results.map((items, key) => {
                         return (
